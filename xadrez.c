@@ -5,43 +5,23 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-    // Número de casas para cada peça (pode alterar se quiser)
-    int Torre = 5;
-    int Bispo = 5;
-    int Rainha = 8;
-
-    int i; 
-
+    int i, j;
     // ==========================
-    // Movimento da TORRE (for)
+    // Movimento do CAVALO 
     // ==========================
-    printf("Movimento da Torre (%d casas para a direita):\n", Torre);
-    for (i = 1; i <= Torre; i++) {
-        printf("Direita (%d)\n", i);
+    printf("Movimento do Cavalo (2 casas para baixo e 1 para a esquerda):\n");
+
+    while (j>i)
+    {
+        j=1;
+        for (i = 0; i < 2; i++)
+        {
+            printf("Baixo(%d)\n",i+1);//Loop para fazer o movimento 2 vezes
+        }
+     printf("Esquerda(%d) \n",j); //usando o while para fazer o movimento para esquerda apenas uma vez  
     }
-    printf("\n");
+    
 
-    // ==========================
-    // Movimento do BISPO (while)
-    // ==========================
-    printf("Movimento do Bispo (%d casas na diagonal cima-direita):\n", Bispo);
-    i = 1; // reinicializa
-    while (i <= Bispo) {
-        printf("Cima, Direita (%d)\n", i);
-        i++;
-    }
-    printf("\n");
-
-    // ==========================
-    // Movimento da RAINHA (do-while)
-    // ==========================
-    printf("Movimento da Rainha (%d casas para a esquerda):\n", Rainha);
-    i = 1; // reinicializa
-    do {
-        printf("Esquerda (%d)\n", i);
-        i++;
-    } while (i <= Rainha);
-    printf("\n");
-
+   
     return 0;
 }
